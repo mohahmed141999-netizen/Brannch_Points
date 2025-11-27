@@ -1,286 +1,1205 @@
-<html lang="ar">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الفروع الفائزة - الماجد للعود</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-<style>
-    body {
-        font-family: 'Cairo', sans-serif;
-        background: linear-gradient(to bottom right, #f0fdf4, #dcfce7);
+<html lang="ar" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسابقة موسم نهاية العام 2025 - شركة الماجد للعود</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&amp;display=swap" rel="stylesheet">
+    <meta name="description" content="مسابقة موسم 2025 لشركة الماجد للعود - مسابقة تحفيزية للفريق">
+    <meta name="keywords" content="الماجد للعود, مسابقة, نهاية العام, 2025, مبيعات, جوائز">
+    
+ <style>
+      /* Tailwind CSS Reset and Base */
+      *, ::before, ::after {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+      }
+      
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+      }
+      
+      body {
         margin: 0;
-        padding: 0;
-        color: #073b1a;
-        animation: both;
-    }
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1rem;
-    }
-    .header {
-        text-align: center;
-        padding: 2rem 1rem;
-        background: linear-gradient(to right, #22c55e, #15803d);
-        color: white;
-        position: relative;
-        animation: fadeInDown 1.2s ease-in-out;
-    }
-    .header img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        border: 4px solid rgba(255,255,255,0.3);
-        background: white;
-        padding: 5px;
-        object-fit: contain;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-    .header h1 {
-        margin-top: 1rem;
-        font-size: 2.5rem;
-        font-weight: 900;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    .header p {
-        font-size: 1.25rem;
-        margin-top: 0.5rem;
-        font-weight: 600;
-    }
-    .actions {
-        text-align: center;
-        margin: 1rem 0;
-    }
-    .actions button {
-        background: #073b1a;
-        color: white;
-        border: none;
-        margin: 0 5px;
-        padding: 0.75rem 1.5rem;
-        border-radius: 9999px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: 0.3s;
-    }
-    .actions button:hover {
-        color: white;
-        background: #15803d;
-    }
-    .search-box {
-        text-align: center;
-        margin: 1.5rem 0;
-    }
-    .search-box input {
-        padding: 0.75rem 1rem;
-        width: 80%;
-        max-width: 400px;
-        border: 2px solid #16a34a;
-        border-radius: 9999px;
-        font-size: 1rem;
-        outline: none;
-        transition: 0.3s;
-    }
-    .search-box input:focus {
-        border-color: #22c55e;
-        box-shadow: 0 0 10px rgba(34,197,94,0.4);
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 1rem;
-        background: white;
-        border-radius: 1rem;
-        overflow: hidden;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        animation: fadeInUp 1.5s ease-in-out;
-    }
-    th, td {
-        padding: 1rem;
-        text-align: center;
-        font-size: 0.9rem;
-    }
-    th {
-        background: linear-gradient(to right, #073b1a, #073b1a);
-        color: #ffffff;
-        font-weight: 1000;
-    }
-    tbody tr:nth-child(even) {
-        background: #f9fafb;
-    }
-    tbody tr:hover {
-        background: #afe8c4;
-    }
-    .pagination {
-        margin: 1.5rem auto;
-        text-align: center;
-    }
-    .pagination button {
-        background: #16a34a;
-        color: white;
-        border: none;
-        margin: 0 5px;
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: 0.3s;
-    }
-    .pagination button:hover {
-        background: #15803d;
-    }
-    .pagination button.active {
-        background: #22c55e;
-        font-weight: 700;
-    }
-    @keyframes fadeInUp {
-        from {opacity: 0; transform: translateY(30px);}
-        to {opacity: 1; transform: translateY(0);}
-    }
-    @keyframes fadeInDown {
-        from {opacity: 0; transform: translateY(-30px);}
-        to {opacity: 1; transform: translateY(0);}
-    }
-</style>
-</head>
-<body>
-<div class="header">
-    <div>
-        <img src="https://cdn.salla.sa/cdn-cgi/image/fit=scale-down,width=400,height=400,onerror=redirect,format=auto/OqeQlR/nXCR6C2cOFuSv1iTLqtEoGAdovWmzeLmjn14NvN5.png" alt="شعار شركة الماجد للعود">
-    </div>
-    <h1>شركة الماجد للعود</h1>
-    <p>قائمة نقاط الفروع 🏆</p>
-</div>
-
-<div class="container">
-    <!-- Actions -->
-    <div class="actions">
-        <button onclick="downloadCSV()">⬇️ تحميل البيانات (CSV)</button>
-    </div>
-
-    <!-- Search bar -->
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="🔍 ابحث برقم الكود، اسم الفرع أو المجموعة">
-    </div>
-
-    <!-- Table -->
-    <table id="branchesTable">
-        <thead>
-            <tr>
-                <th>كود الفرع</th>
-                <th>إسم الفرع</th>
-                <th>المجموعة</th>
-            </tr>
-        </thead>
-        <tbody>
-
-<tr><td>1009</td><td>مارينا مول - الرياض حي الملك فهد</td><td>C</td></tr>
-<tr><td>1014</td><td>المعيقلية - الرياض أسواق التعمير</td><td>A</td></tr>
-<tr><td>1017</td><td>سوق حجاب - الرياض حي النسيم الغربي</td><td>B</td></tr>
-<tr><td>1046</td><td>مكة - أبراج البيت 1 الحرم المكي</td><td>B</td></tr>
-<tr><td>1118</td><td>الطائف - الجوري مول 1</td><td>B</td></tr>
-<tr><td>1120</td><td>الوادي - الرياض طريق عثمان بن عفان</td><td>A</td></tr>
-<tr><td>1128</td><td>الرياض بارك 1 - الرياض الطريق الدائري الشمالي</td><td>B</td></tr>
-<tr><td>1181</td><td>النخيل مول 1 - الرياض حي المغرزات</td><td>A</td></tr>
-<tr><td>1198</td><td>العويس - الرياض أسواق العويس 3</td><td>C</td></tr>
-<tr><td>1216</td><td>جدة - الحمدانية 2 شارع عبد الله بن أبي أمية</td><td>B</td></tr>
-<tr><td>1231</td><td>جدة - طريق المدينة المنورة</td><td>C</td></tr>
-<tr><td>1233</td><td>جدة - التحلية 2 شارع الأمير محمد بن عبد العزيز</td><td>C</td></tr>
-<tr><td>1234</td><td>جدة - طريق الأمير سلطان 1</td><td>C</td></tr>
-<tr><td>1324</td><td>صامطة - السوق الداخلي</td><td>C</td></tr>
-<tr><td>1392</td><td>مكة - مركز مكة التجاري 2</td><td>A</td></tr>
-<tr><td>2013</td><td>مول 360 - الكويت</td><td>C</td></tr>
-<tr><td>2024</td><td>الأفينيوز مول 5 - الكويت</td><td>A</td></tr>
-<tr><td>3026</td><td>دبي - دبي فستيفال ستي مول 1 - الإمارات</td><td>A</td></tr>
-<tr><td>3044</td><td>أبو ظبي - مركز التجارة العالمي مول - الإمارات</td><td>C</td></tr>
-
-
-
-
-
-
-
-
-
-
+        line-height: inherit;
+        font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        direction: rtl;
+      }
+      
+      /* Utility Classes */
+      .min-h-screen { min-height: 100vh; }
+      .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
+      .from-amber-50 { --tw-gradient-from: #fffbeb; --tw-gradient-to: rgb(255 251 235 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .via-orange-50 { --tw-gradient-to: rgb(255 247 237 / 0); --tw-gradient-stops: var(--tw-gradient-from), #fff7ed, var(--tw-gradient-to); }
+      .to-yellow-50 { --tw-gradient-to: #fefce8; }
+      
+      .relative { position: relative; }
+      .absolute { position: absolute; }
+      .inset-0 { inset: 0px; }
+      .overflow-hidden { overflow: hidden; }
+      
+      .bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
+      .from-amber-900 { --tw-gradient-from: #220e02; --tw-gradient-to: rgb(120 53 15 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .via-yellow-800 { --tw-gradient-to: rgb(133 77 14 / 0); --tw-gradient-stops: var(--tw-gradient-from), #000000, var(--tw-gradient-to); }
+      .to-orange-900 { --tw-gradient-to: #7c2d12; }
+      
+      .text-white { color: rgb(255 255 255); }
+      .bg-black\/20 { background-color: rgb(0 0 0 / 0.2); }
+      .bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
+      .from-yellow-600\/10 { --tw-gradient-from: rgb(202 138 4 / 0.1); --tw-gradient-to: rgb(202 138 4 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-orange-600\/10 { --tw-gradient-to: rgb(234 88 12 / 0.1); }
+      
+      .container { width: 100%; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+      @media (min-width: 640px) { .container { max-width: 640px; } }
+      @media (min-width: 768px) { .container { max-width: 768px; } }
+      @media (min-width: 1024px) { .container { max-width: 1024px; } }
+      @media (min-width: 1280px) { .container { max-width: 1280px; } }
+      
+      .mx-auto { margin-left: auto; margin-right: auto; }
+      .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+      
+      .text-center { text-align: center; }
+      .space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+      
+      .inline-block { display: inline-block; }
+      .p-4 { padding: 1rem; }
+      .bg-white\/10 { background-color: rgb(255 255 255 / 0.1); }
+      .backdrop-blur-sm { backdrop-filter: blur(4px); }
+      .rounded-full { border-radius: 9999px; }
+      .mb-4 { margin-bottom: 1rem; }
+      
+      .w-20 { width: 5rem; }
+      .h-20 { height: 5rem; }
+      .object-contain { object-fit: contain; }
+      
+      .text-5xl { font-size: 3rem; line-height: 1; }
+      .font-bold { font-weight: 700; }
+      .bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
+      .from-yellow-300 { --tw-gradient-from: #fde047; --tw-gradient-to: rgb(253 224 71 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .via-orange-200 { --tw-gradient-to: rgb(254 215 170 / 0); --tw-gradient-stops: var(--tw-gradient-from), #fed7aa, var(--tw-gradient-to); }
+      .to-yellow-400 { --tw-gradient-to: #facc15; }
+      .bg-clip-text { background-clip: text; }
+      .text-transparent { color: transparent; }
+      
+      .flex { display: flex; }
+      .items-center { align-items: center; }
+      .justify-center { justify-content: center; }
+      .space-x-4 > :not([hidden]) ~ :not([hidden]) { margin-left: 1rem; }
+      .space-x-reverse > :not([hidden]) ~ :not([hidden]) { margin-left: 0; margin-right: 1rem; }
+      
+      .w-8 { width: 2rem; }
+      .h-8 { height: 2rem; }
+      .text-yellow-300 { color: #fde047; }
+      .animate-spin { animation: spin 1s linear infinite; }
+      
+      .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+      .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+      .text-yellow-100 { color: #fef3c7; }
+      .max-w-3xl { max-width: 48rem; }
+      .leading-relaxed { line-height: 1.625; }
+      
+      .bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
+      .from-orange-100 { --tw-gradient-from: #ffedd5; --tw-gradient-to: rgb(255 237 213 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-yellow-100 { --tw-gradient-to: #fef3c7; }
+      
+      .mb-8 { margin-bottom: 2rem; }
+      .text-amber-900 { color: #78350f; }
+      .gap-3 { gap: 0.75rem; }
+      .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+      .text-orange-600 { color: #ea580c; }
+      
+      .space-x-reverse > :not([hidden]) ~ :not([hidden]) { margin-left: 0; margin-right: 1rem; }
+      .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
+      .from-amber-800 { --tw-gradient-from: #92400e; --tw-gradient-to: rgb(146 64 14 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-orange-800 { --tw-gradient-to: #9a3412; }
+      .rounded-2xl { border-radius: 1rem; }
+      .shadow-2xl { box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+      .p-6 { padding: 1.5rem; }
+      .min-w-\[100px\] { min-width: 100px; }
+      .transform { transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)); }
+      .hover\:scale-105:hover { --tw-scale-x: 1.05; --tw-scale-y: 1.05; }
+      .transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+      
+      .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+      .mt-2 { margin-top: 0.5rem; }
+      .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+      .text-yellow-200 { color: #fef08a; }
+      
+      .mt-8 { margin-top: 2rem; }
+      .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+      .text-amber-800 { color: #92400e; }
+      .font-semibold { font-weight: 600; }
+      
+      .space-y-12 > :not([hidden]) ~ :not([hidden]) { margin-top: 3rem; }
+      .bg-white { background-color: rgb(255 255 255); }
+      .rounded-3xl { border-radius: 1.5rem; }
+      .p-8 { padding: 2rem; }
+      .border { border-width: 1px; }
+      .border-orange-100 { border-color: #ffedd5; }
+      
+      .mb-6 { margin-bottom: 1.5rem; }
+      .grid { display: grid; }
+      .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gap-6 { gap: 1.5rem; }
+      
+      .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+      .items-start { align-items: flex-start; }
+      .space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
+      .from-orange-50 { --tw-gradient-from: #fff7ed; --tw-gradient-to: rgb(255 247 237 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-yellow-50 { --tw-gradient-to: #fefce8; }
+      .rounded-xl { border-radius: 0.75rem; }
+      
+      .bg-orange-600 { background-color: #ea580c; }
+      .rounded-full { border-radius: 9999px; }
+      .font-medium { font-weight: 500; }
+      .text-gray-700 { color: #374151; }
+      
+      .from-yellow-50 { --tw-gradient-from: #fefce8; --tw-gradient-to: rgb(254 252 232 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-orange-50 { --tw-gradient-to: #fff7ed; }
+      .bg-yellow-600 { background-color: #ca8a04; }
+      
+      .from-amber-100 { --tw-gradient-from: #fef3c7; --tw-gradient-to: rgb(254 243 199 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-orange-100 { --tw-gradient-to: #ffedd5; }
+      
+      .justify-between { justify-content: space-between; }
+      .border-l-4 { border-left-width: 4px; }
+      .border-blue-500 { border-color: #3b82f6; }
+      .from-blue-50 { --tw-gradient-from: #eff6ff; --tw-gradient-to: rgb(239 246 255 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-indigo-50 { --tw-gradient-to: #eef2ff; }
+      .text-blue-800 { color: #1e40af; }
+      .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+      .text-blue-600 { color: #2563eb; }
+      
+      .border-green-500 { border-color: #22c55e; }
+      .from-green-50 { --tw-gradient-from: #f0fdf4; --tw-gradient-to: rgb(240 253 244 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-emerald-50 { --tw-gradient-to: #ecfdf5; }
+      .text-green-800 { color: #166534; }
+      .text-green-600 { color: #16a34a; }
+      
+      .border-purple-500 { border-color: #a855f7; }
+      .from-purple-50 { --tw-gradient-from: #faf5ff; --tw-gradient-to: rgb(250 245 255 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-violet-50 { --tw-gradient-to: #f5f3ff; }
+      .text-purple-800 { color: #6b21a8; }
+      .text-purple-600 { color: #9333ea; }
+      
+      .border-pink-500 { border-color: #ec4899; }
+      .from-pink-50 { --tw-gradient-from: #fdf2f8; --tw-gradient-to: rgb(253 242 248 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-rose-50 { --tw-gradient-to: #fff1f2; }
+      .text-pink-800 { color: #9d174d; }
+      .text-pink-600 { color: #db2777; }
+      
+      .border-orange-500 { border-color: #f97316; }
+      .text-orange-800 { color: #9a3412; }
+      .text-orange-600 { color: #ea580c; }
+      .text-gray-600 { color: #4b5563; }
+      
+      .gap-8 { gap: 2rem; }
+      .from-amber-50 { --tw-gradient-from: #fffbeb; --tw-gradient-to: rgb(255 251 235 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .border-orange-200 { border-color: #fed7aa; }
+      .text-orange-600 { color: #ea580c; }
+      
+      .from-yellow-50 { --tw-gradient-from: #fefce8; --tw-gradient-to: rgb(254 252 232 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-amber-50 { --tw-gradient-to: #fffbeb; }
+      .border-yellow-200 { border-color: #fef08a; }
+      .text-yellow-800 { color: #854d0e; }
+      .text-yellow-600 { color: #ca8a04; }
+      
+      .opacity-5 { opacity: 0.05; }
+      .top-10 { top: 2.5rem; }
+      .left-10 { left: 2.5rem; }
+      .bg-orange-300 { background-color: #fdba74; }
+      .animate-bounce { animation: bounce 1s infinite; }
+      
+      .top-32 { top: 8rem; }
+      .right-16 { right: 4rem; }
+      .w-16 { width: 4rem; }
+      .h-16 { height: 4rem; }
+      .bg-yellow-300 { background-color: #fde047; }
+      
+      .bottom-20 { bottom: 5rem; }
+      .left-20 { left: 5rem; }
+      .w-12 { width: 3rem; }
+      .h-12 { height: 3rem; }
+      .bg-amber-300 { background-color: #fcd34d; }
+      .animate-ping { animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite; }
+      
+      .bottom-32 { bottom: 8rem; }
+      .right-32 { right: 8rem; }
+      .w-14 { width: 3.5rem; }
+      .h-14 { height: 3.5rem; }
+      .bg-orange-400 { background-color: #fb923c; }
+      
+      .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .hover\:shadow-2xl:hover { box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+      .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+      .duration-300 { transition-duration: 300ms; }
+      .hover\:scale-105:hover { --tw-scale-x: 1.05; --tw-scale-y: 1.05; }
+      .hover\:-translate-y-2:hover { --tw-translate-y: -0.5rem; }
+      .cursor-pointer { cursor: pointer; }
+      .group { }
+      
+      .from-orange-200\/0 { --tw-gradient-from: rgb(254 215 170 / 0); --tw-gradient-to: rgb(254 215 170 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .via-yellow-200\/20 { --tw-gradient-to: rgb(254 240 138 / 0); --tw-gradient-stops: var(--tw-gradient-from), rgb(254 240 138 / 0.2), var(--tw-gradient-to); }
+      .to-orange-200\/0 { --tw-gradient-to: rgb(254 215 170 / 0); }
+      .translate-x-\[-100\%\] { --tw-translate-x: -100%; }
+      .group-hover\:translate-x-\[100\%\]:hover { --tw-translate-x: 100%; }
+      .transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+      .duration-700 { transition-duration: 700ms; }
+      
+      .z-10 { z-index: 10; }
+      .group-hover\:text-orange-900:hover { color: #7c2d12; }
+      .transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+      
+      .to-indigo-100 { --tw-gradient-to: #e0e7ff; }
+      .hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04); }
+      .bg-blue-500 { background-color: #3b82f6; }
+      .text-blue-700 { color: #1d4ed8; }
+      
+      .to-emerald-100 { --tw-gradient-to: #dcfce7; }
+      .bg-green-500 { background-color: #22c55e; }
+      .text-green-700 { color: #15803d; }
+      
+      .mt-12 { margin-top: 3rem; }
+      .from-orange-600 { --tw-gradient-from: #ea580c; --tw-gradient-to: rgb(234 88 12 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-amber-600 { --tw-gradient-to: #d97706; }
+      .hover\:shadow-3xl:hover { box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25); }
+      .duration-500 { transition-duration: 500ms; }
+      .from-transparent { --tw-gradient-from: transparent; --tw-gradient-to: rgb(0 0 0 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .via-white\/10 { --tw-gradient-to: rgb(255 255 255 / 0); --tw-gradient-stops: var(--tw-gradient-from), rgb(255 255 255 / 0.1), var(--tw-gradient-to); }
+      .to-transparent { --tw-gradient-to: transparent; }
+      
+      .mt-6 { margin-top: 1.5rem; }
+      .space-x-4 > :not([hidden]) ~ :not([hidden]) { margin-left: 1rem; }
+      .w-6 { width: 1.5rem; }
+      .h-6 { height: 1.5rem; }
+      
+      .w-16 { width: 4rem; }
+      .h-16 { height: 4rem; }
+      
+      /* Additional styles for the new sections */
+      .border-2 { border-width: 2px; }
+      .shadow-xl { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04); }
+      .from-yellow-400 { --tw-gradient-from: #facc15; --tw-gradient-to: rgb(250 204 21 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-orange-400 { --tw-gradient-to: #fb923c; }
+      .from-orange-300 { --tw-gradient-from: #fdba74; --tw-gradient-to: rgb(253 186 116 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-yellow-300 { --tw-gradient-to: #fde047; }
+      .from-amber-200 { --tw-gradient-from: #fde68a; --tw-gradient-to: rgb(253 230 138 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-orange-200 { --tw-gradient-to: #fed7aa; }
+      .text-gray-800 { color: #1f2937; }
+      .from-amber-300 { --tw-gradient-from: #fcd34d; --tw-gradient-to: rgb(252 211 77 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-yellow-300 { --tw-gradient-to: #fde047; }
+      .from-yellow-200 { --tw-gradient-from: #fef08a; --tw-gradient-to: rgb(254 240 138 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-amber-200 { --tw-gradient-to: #fde68a; }
+      .from-yellow-400 { --tw-gradient-from: #facc15; --tw-gradient-to: rgb(250 204 21 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+      .to-amber-400 { --tw-gradient-to: #fbbf24; }
+      .text-amber-600 { color: #d97706; }
+      .border-blue-200 { border-color: #dbeafe; }
+      .flex-shrink-0 { flex-shrink: 0; }
+      .mt-1 { margin-top: 0.25rem; }
+      .mr-1 { margin-right: 0.25rem; }
+      .space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem; }
+      .shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05); }
+      .orange-100 { background-color: #ffedd5; }
+      .yellow-100 { background-color: #fef3c7; }
+      
+      /* Animations */
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      
+      @keyframes pulse {
+        50% { opacity: .5; }
+      }
+      
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(-25%);
+          animation-timing-function: cubic-bezier(0.8,0,1,1);
+        }
+        50% {
+          transform: none;
+          animation-timing-function: cubic-bezier(0,0,0.2,1);
+        }
+      }
+      
+      @keyframes ping {
+        75%, 100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+      
+      /* Custom animations */
+      .animate-fadeIn {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      
+      .animate-slideUp {
+        animation: slideUp 0.6s ease-out;
+      }
+      
+      .animate-bounce-slow {
+        animation: bounce 2s infinite;
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #d97706, #ea580c);
+        border-radius: 10px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #b45309, #c2410c);
+      }
+      
+      /* تحسين النصوص العربية */
+      .text-arabic {
+        font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* تأثيرات التفاعل */
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      
+      /* تدرجات مخصصة */
+      .gradient-gold {
+        background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706, #b45309);
+      }
+      
+      .gradient-wood {
+        background: linear-gradient(135deg, #92400e, #b45309, #d97706, #f59e0b);
+      }
+      
+      /* أنيميشن للبطاقات */
+      .card-animate {
+        animation: cardFloat 6s ease-in-out infinite;
+      }
+      
+      @keyframes cardFloat {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      
+      /* تأثيرات الضوء */
+      .glow {
+        box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+      }
+      
+      .glow:hover {
+        box-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+      }
+      
+      /* تأثيرات إضافية للحركة */
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+      
+      @keyframes shimmer {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+      
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      
+      .animate-shimmer {
+        animation: shimmer 2s infinite;
+      }
+      
+      /* تحسينات الجوال */
+      @media (max-width: 768px) {
+        .container {
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;
+        }
+        
+        .px-6 {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        
+        .py-12 {
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+        
+        .text-5xl {
+          font-size: 2.25rem;
+        }
+        
+        .text-3xl {
+          font-size: 1.5rem;
+        }
+        
+        .text-xl {
+          font-size: 1.125rem;
+        }
+        
+        .p-8 {
+          padding: 1.5rem;
+        }
+        
+        .p-6 {
+          padding: 1rem;
+        }
+        
+        .p-4 {
+          padding: 0.75rem;
+        }
+        
+        .space-y-12 > :not([hidden]) ~ :not([hidden]) {
+          margin-top: 2rem;
+        }
+        
+        .gap-8 {
+          gap: 1.5rem;
+        }
+        
+        .gap-6 {
+          gap: 1rem;
+        }
+        
+        .rounded-3xl {
+          border-radius: 1rem;
+        }
+        
+        .rounded-2xl {
+          border-radius: 0.75rem;
+        }
+        
+        /* تحسين العد التنازلي للجوال */
+        .countdown-container {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.5rem;
+        }
+        
+        .countdown-item {
+          min-width: 70px;
+          padding: 0.75rem;
+        }
+        
+        .countdown-item .text-3xl {
+          font-size: 1.5rem;
+        }
+        
+        /* تحسين الجداول للجوال */
+        .table-container {
+          overflow-x: auto;
+          width: 100%;
+        }
+        
+        .points-table {
+          min-width: 500px;
+        }
+        
+        /* تحسين آلية المسابقة */
+        .mechanism-grid {
+          grid-template-columns: 1fr !important;
+          gap: 1rem;
+        }
+        
+        /* تحسين آلية التوزيع */
+        .distribution-item {
+          padding: 0.75rem;
+        }
+        
+        .distribution-item .text-2xl {
+          font-size: 1.25rem;
+        }
+        
+        /* تحسين الأمثلة التوضيحية */
+        .examples-grid {
+          grid-template-columns: 1fr !important;
+        }
+        
+        /* تحسين العبارات التحفيزية */
+        .quotes-grid {
+          grid-template-columns: 1fr !important;
+        }
+        
+        #currentQuote {
+          font-size: 1.25rem;
+        }
+        
+        /* تحسين الهيدر */
+        header .text-5xl {
+          font-size: 2rem;
+        }
+        
+        header .text-3xl {
+          font-size: 1.25rem;
+        }
+        
+        header .space-y-6 {
+          gap: 1rem;
+        }
+        
+        /* تحسين الفوتر */
+        footer .text-2xl {
+          font-size: 1.25rem;
+        }
+        
+        footer .text-lg {
+          font-size: 1rem;
+        }
+      }
+      
+      /* تحسينات إضافية للشاشات الصغيرة جدًا */
+      @media (max-width: 480px) {
+        .countdown-item {
+          min-width: 60px;
+          padding: 0.5rem;
+        }
+        
+        .countdown-item .text-3xl {
+          font-size: 1.25rem;
+        }
+        
+        .countdown-item .text-sm {
+          font-size: 0.75rem;
+        }
+        
+        .p-8 {
+          padding: 1rem;
+        }
+        
+        .text-4xl {
+          font-size: 1.5rem;
+        }
+        
+        .text-2xl {
+          font-size: 1.25rem;
+        }
+        
+        .text-lg {
+          font-size: 1rem;
+        }
+      }
+      
+      /* Responsive */
+      @media (min-width: 768px) {
+        .md\:text-6xl { font-size: 3.75rem; line-height: 1; }
+        .md\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .md\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      
+      @media (min-width: 1024px) {
+        .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      }
+    </style>  </head><body>
+    <div class="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+      <!-- Header -->
+      <header class="relative overflow-hidden bg-gradient-to-r from-amber-900 via-yellow-800 to-orange-900 text-white">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-yellow-600/10 to-orange-600/10"></div>
+        
+        <div class="relative container mx-auto px-6 py-12">
+          <div class="text-center space-y-6">
+            <div class="inline-block p-4 bg-white/10 backdrop-blur-sm rounded-full mb-4" , style="background-color: white">
+              <img src="https://cdn.salla.sa/cdn-cgi/image/fit=scale-down,width=400,height=400,onerror=redirect,format=auto/OqeQlR/nXCR6C2cOFuSv1iTLqtEoGAdovWmzeLmjn14NvN5.png" alt="شعار شركة الماجد للعود" class="w-20 h-20 object-contain">
+            </div>
             
-        </tbody>
-    </table>
+            <h1 class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-300 via-orange-200 to-yellow-400 bg-clip-text text-transparent">
+              شركة الماجد للعود
+            </h1>
+            
+            <div class="flex items-center justify-center space-x-4 space-x-reverse">
+              <svg class="w-8 h-8 text-yellow-300 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+              </svg>
+              <h2 class="text-3xl md:text-4xl font-bold">🌟 مسابقة موسم نهاية العام</h2>
+              <svg class="w-8 h-8 text-yellow-300 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+              </svg>
+            </div>
+              <div>
+              <h2>الجولة الثانية</h2>
+            </div>
+            
+            <p class="text-xl md:text-2xl text-yellow-100 max-w-3xl mx-auto leading-relaxed">
+              مرحبًا بكم أبطال المبيعات ✨، إيمانًا بدوركم الكبير في نجاح الشركة
+            </p>
+          </div>
+        </div>
+      </header>
 
-    <!-- Pagination -->
-    <div class="pagination" id="pagination"></div>
-</div>
+      <!-- العد التنازلي -->
+      <section class="py-12 bg-gradient-to-r from-orange-100 to-yellow-100">
+        <div class="container mx-auto px-6" style="background-color: w">
+          <div class="text-center mb-8">
+            <h3 class="text-3xl font-bold text-amber-900 mb-4 flex items-center justify-center gap-3">
+              <svg class="w-8 h-8 animate-pulse text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              المتبقي لانتهاء المسابقة
+            </h3>
+          </div>
+          
+          <div class="flex justify-center items-center space-x-4 space-x-reverse">
+            <div class="text-center">
+              <div class="bg-gradient-to-br from-amber-800 to-orange-800 text-white rounded-2xl shadow-2xl p-6 min-w-[100px] transform hover:scale-105 transition-transform">
+                <div class="text-3xl md:text-4xl font-bold" id="days">0</div>
+                <div class="text-sm mt-2 text-yellow-200">أيام</div>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-gradient-to-br from-amber-800 to-orange-800 text-white rounded-2xl shadow-2xl p-6 min-w-[100px] transform hover:scale-105 transition-transform">
+                <div class="text-3xl md:text-4xl font-bold" id="hours">0</div>
+                <div class="text-sm mt-2 text-yellow-200">ساعات</div>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-gradient-to-br from-amber-800 to-orange-800 text-white rounded-2xl shadow-2xl p-6 min-w-[100px] transform hover:scale-105 transition-transform">
+                <div class="text-3xl md:text-4xl font-bold" id="minutes">0</div>
+                <div class="text-sm mt-2 text-yellow-200">دقائق</div>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="bg-gradient-to-br from-amber-800 to-orange-800 text-white rounded-2xl shadow-2xl p-6 min-w-[100px] transform hover:scale-105 transition-transform">
+                <div class="text-3xl md:text-4xl font-bold" id="seconds">0</div>
+                <div class="text-sm mt-2 text-yellow-200">ثواني</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-8">
+            <p class="text-lg text-amber-800 font-semibold">
+              📅 من الخميس 27/11/2025 حتى الأحد 30/11/2025
+            </p>
+          </div>
+        </div>
+      </section>
 
-<script>
-    const rowsPerPage = 15;
-    let currentPage = 1;
+      <!-- المحتوى الرئيسي -->
+      <main class="container mx-auto px-6 py-12 space-y-12">
+        
+        <!-- آلية المسابقة -->
+        <section class="bg-white rounded-3xl shadow-2xl p-8 border border-orange-100">
+          <h3 class="text-3xl font-bold text-amber-900 mb-6 flex items-center gap-3">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            📌 آلية المسابقة
+          </h3>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3 space-x-reverse p-4 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl">
+                <div class="w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+                <p class="text-gray-700 font-medium">لكل فرع هدف يومي لأيام المسابقة</p>
+              </div>
 
-    const table = document.getElementById("branchesTable").getElementsByTagName("tbody")[0];
-    const pagination = document.getElementById("pagination");
-    const rows = table.getElementsByTagName("tr");
+              <div class="flex items-start space-x-3 space-x-reverse p-4 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl">
+                <div class="w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+                <p class="text-gray-700 font-medium">عند تحقيق الهدف الإجمالي سيتم تحديد الفائزين</p>
+              </div>
+              <div class="flex items-start space-x-3 space-x-reverse p-4 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl">
+                <div class="w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+                <p class="text-gray-700 font-medium">يجب تحقيق الهدف الإجمالي بغض النظر عن تحقيق الأيام</p>
+              </div>
+              
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3 space-x-reverse p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl">
+                <div class="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+                <p class="text-gray-700 font-medium">تم تصنيف الفروع الي ثلاث مجموعات بناء على المستهدف</p>
+              </div>
+              
+              <div class="flex items-start space-x-3 space-x-reverse p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl">
+                <div class="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold">5</div>
+                <p class="text-gray-700 font-medium">لكل مجموعة جدول جوائز خاص</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8 p-6 bg-gradient-to-r from-amber-100 to-orange-100 rounded-2xl text-center">
+            <p class="text-xl font-bold text-amber-800">💡سيتم إرسال مستهدف الفروع لكل فرع على حدا عبر الإيميل</p>
+          </div>
+        </section>
 
-    function displayTable(page) {
-        let start = (page - 1) * rowsPerPage;
-        let end = start + rowsPerPage;
+        <!-- جداول النقاط والمكافآت -->
+        <section class="bg-white rounded-3xl shadow-2xl p-8 border border-orange-100">
+          <h3 class="text-3xl font-bold text-amber-900 mb-8 flex items-center gap-3 justify-center">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+            🏆 جدول الجوائز
+          </h3>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- جدول المجموعة A -->
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-2xl border-2 border-orange-200">
+              <h4 class="text-2xl font-bold text-amber-800 mb-6 text-center flex items-center justify-center gap-2">
+                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"></path>
+                </svg>
+                المجموعة A
+              </h4>
+                
+                
+              
+              <div class="space-y-3">
+                <div class="p-4 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-yellow-400 to-amber-400 text-white">
+                  <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                      <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                      </svg>
+                      
+                    </div>
+                    <div class="text-right">
+                      <span class="text-2xl font-bold">1400</span>
+                      <span class="text-sm mr-1">ريال</span>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+ 
+               
+               
+              </div>
+              
+              
+            </div>
+            
+            <!-- جدول المجموعة B -->
+            <div class="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-2xl border-2 border-yellow-200">
+              <h4 class="text-2xl font-bold text-yellow-800 mb-6 text-center flex items-center justify-center gap-2">
+                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"></path>
+                </svg>
+                المجموعة B
+              </h4>
+              
+              <div class="space-y-3">
+                <div class="p-4 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-yellow-400 to-amber-400 text-white">
+                  <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                      <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                      </svg>
+                     
+                    </div>
+                    <div class="text-right">
+                      <span class="text-2xl font-bold">1200</span>
+                      <span class="text-sm mr-1">ريال</span>
+                    </div>
+                  </div>
 
-        for (let i = 0; i < rows.length; i++) {
-            rows[i].style.display = (i >= start && i < end) ? "" : "none";
+                </div>
+               
+
+              </div>
+              
+             
+            </div>
+              
+              
+              
+              <div class="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-2xl border-2 border-yellow-200">
+              <h4 class="text-2xl font-bold text-yellow-800 mb-6 text-center flex items-center justify-center gap-2">
+                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"></path>
+                </svg>
+                المجموعة C
+              </h4>
+              
+              <div class="space-y-3">
+                <div class="p-4 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-yellow-400 to-amber-400 text-white">
+                  <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                      <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                      </svg>
+                     
+                    </div>
+                    <div class="text-right">
+                      <span class="text-2xl font-bold">1000</span>
+                      <span class="text-sm mr-1">ريال</span>
+                    </div>
+                  </div>
+
+                </div>
+               
+
+              </div>
+              
+             
+            </div>
+          </div>
+          
+          <!-- ملاحظة مهمة -->
+          <div class="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <span class="text-white font-bold text-sm">!</span>
+              </div>
+              <div>
+                <h5 class="text-lg font-bold text-blue-800 mb-2">📌 ملاحظة مهمة</h5>
+                <p class="text-blue-700 leading-relaxed">
+                  تعاون الفريق الأداء الوحيدة التي ستجعل الفوز قريب وسيعود الفضل الي الفريق كاملا .
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- آلية التوزيع -->
+        <section class="bg-white rounded-3xl shadow-2xl p-8 border border-orange-100">
+          <h3 class="text-3xl font-bold text-amber-900 mb-6 flex items-center gap-3">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            📌 آلية توزيع الجائزة داخل الفرع
+          </h3>
+          
+          <div class="space-y-4">
+            <div class="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-l-4 border-blue-500">
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-blue-800">مسؤول الفرع</span>
+                <span class="text-2xl font-bold text-blue-600">25%</span>
+              </div>
+            </div>
+            
+            <div class="p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-500">
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-green-800">أمين الصندوق</span>
+                <span class="text-2xl font-bold text-green-600">5%</span>
+              </div>
+            </div>
+            
+            <div class="p-4 bg-gradient-to-r from-purple-50 to-violet-50 rounded-xl border-l-4 border-purple-500">
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-purple-800">المساعد</span>
+                <span class="text-2xl font-bold text-purple-600">5%</span>
+              </div>
+            </div>
+            
+            <div class="p-4 bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl border-l-4 border-pink-500">
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-pink-800">العامل</span>
+                <span class="text-2xl font-bold text-pink-600">5%</span>
+              </div>
+            </div>
+            
+            <div class="p-4 bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl border-l-4 border-orange-500">
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-orange-800">باقي الفريق</span>
+                <span class="text-2xl font-bold text-orange-600">60%</span>
+              </div>
+              <p class="text-sm text-gray-600 mt-2">يُوزع حسب وزن المبيعات</p>
+            </div>
+          </div>
+          
+          <div class="mt-8 p-6 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-2xl">
+            <p class="text-amber-800 font-medium">
+              🔹 <strong>ملاحظة هامة:</strong> إذا لم يكن أحد هذه الوظائف (أمين الصندوق، المساعد، العامل) موجودًا في الفرع، فإن نسبته (5%) تُضاف مباشرة إلى حصة الفريق (60%).
+            </p>
+              <p class="text-amber-800 font-medium">
+              🔹 <strong>الحد الأنى : </strong>أن لا تقل قيمة جائزة الموظف عن 10 ريال بغض النظر عن الوظيفة. 
+            </p>
+          </div>
+        </section>
+
+
+
+        <!-- التحفيز -->
+        <section class="bg-white rounded-3xl shadow-2xl p-8 border border-orange-100 overflow-hidden relative">
+          <!-- خلفية متحركة -->
+          <div class="absolute inset-0 opacity-5">
+            
+            <div class="absolute top-32 right-16 w-16 h-16 bg-yellow-300 rounded-full animate-pulse"></div>
+            <div class="absolute bottom-20 left-20 w-12 h-12 bg-amber-300 rounded-full animate-ping"></div>
+            <div class="absolute bottom-32 right-32 w-14 h-14 bg-orange-400 rounded-full animate-spin"></div>
+          </div>
+          
+          <h3 class="text-3xl font-bold text-amber-900 mb-6 flex items-center gap-3 justify-center">
+            <svg class="w-8 h-8 text-orange-600 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+            🚀 عبارات تحفيزية للفريق
+          </h3>
+          
+          <div class="text-center mb-8">
+            <div class="p-8 bg-gradient-to-r from-orange-100 via-yellow-100 to-orange-100 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+              <p class="text-3xl font-bold text-amber-800 animate-bounce relative z-10" id="currentQuote">🏆 اعملوا بجد على الهدف... فالجوائز تنتظر الأبطال!</p>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8" id="quotesGrid"><div class="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group relative overflow-hidden" style="animation-delay: 0s;">
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-200/0 via-yellow-200/20 to-orange-200/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <p class="text-lg font-semibold text-amber-800 text-center relative z-10 group-hover:text-orange-900 transition-colors">
+              ✨ كل ساعي وسيصل للهدف!
+            </p>
+          </div><div class="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group relative overflow-hidden" style="animation-delay: 0.1s;">
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-200/0 via-yellow-200/20 to-orange-200/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <p class="text-lg font-semibold text-amber-800 text-center relative z-10 group-hover:text-orange-900 transition-colors">
+              🏆 اعملوا بجد على الهدف... فالجوائز تنتظر الأبطال!
+            </p>
+          </div><div class="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group relative overflow-hidden" style="animation-delay: 0.2s;">
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-200/0 via-yellow-200/20 to-orange-200/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <p class="text-lg font-semibold text-amber-800 text-center relative z-10 group-hover:text-orange-900 transition-colors">
+              🌟 معًا نصنع الفارق، ومعًا نحقق القمة!
+            </p>
+          </div><div class="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group relative overflow-hidden" style="animation-delay: 0.3s;">
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-200/0 via-yellow-200/20 to-orange-200/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <p class="text-lg font-semibold text-amber-800 text-center relative z-10 group-hover:text-orange-900 transition-colors">
+              💡 المسؤولية جماعية… والفرح جماعي!
+            </p>
+          </div><div class="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group relative overflow-hidden" style="animation-delay: 0.4s;">
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-200/0 via-yellow-200/20 to-orange-200/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <p class="text-lg font-semibold text-amber-800 text-center relative z-10 group-hover:text-orange-900 transition-colors">
+              🚀 طموحكم لا حدود له، وإنجازكم يفوق التوقعات!
+            </p>
+          </div><div class="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group relative overflow-hidden" style="animation-delay: 0.5s;">
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-200/0 via-yellow-200/20 to-orange-200/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <p class="text-lg font-semibold text-amber-800 text-center relative z-10 group-hover:text-orange-900 transition-colors">
+              ⭐ كل يوم فرصة جديدة لتحقيق المعجزات!
+            </p>
+          </div><div class="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group relative overflow-hidden" style="animation-delay: 0.6s;">
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-200/0 via-yellow-200/20 to-orange-200/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <p class="text-lg font-semibold text-amber-800 text-center relative z-10 group-hover:text-orange-900 transition-colors">
+              🎯 الهدف واضح، والطريق مفتوح، والنجاح قريب!
+            </p>
+          </div><div class="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group relative overflow-hidden" style="animation-delay: 0.7s;">
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-200/0 via-yellow-200/20 to-orange-200/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <p class="text-lg font-semibold text-amber-800 text-center relative z-10 group-hover:text-orange-900 transition-colors">
+              💪 قوتكم في وحدتكم، ونجاحكم في تعاونكم!
+            </p>
+          </div><div class="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group relative overflow-hidden" style="animation-delay: 0.8s;">
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-200/0 via-yellow-200/20 to-orange-200/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <p class="text-lg font-semibold text-amber-800 text-center relative z-10 group-hover:text-orange-900 transition-colors">
+              🌈 اليوم أفضل من أمس، وغداً أفضل من اليوم!
+            </p>
+          </div><div class="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group relative overflow-hidden" style="animation-delay: 0.9s;">
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-200/0 via-yellow-200/20 to-orange-200/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <p class="text-lg font-semibold text-amber-800 text-center relative z-10 group-hover:text-orange-900 transition-colors">
+              🔥 الشغف يقودكم، والعزيمة تحقق أحلامكم!
+            </p>
+          </div></div>
+          
+          <!-- قسم إضافي للتحفيز -->
+          <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div class="p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-bold text-blue-800 mb-2">🏅 روح الفريق</h4>
+                <p class="text-blue-700">النجاح الحقيقي يأتي من العمل الجماعي والتعاون المثمر</p>
+              </div>
+            </div>
+            
+            <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-bold text-green-800 mb-2">🎯 التركيز على الهدف</h4>
+                <p class="text-green-700">كل خطوة تقربنا من تحقيق الأهداف المنشودة</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-12 text-center">
+            <div class="p-8 bg-gradient-to-r from-orange-600 to-amber-600 rounded-3xl shadow-2xl text-white hover:shadow-3xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse" style="background-color: wheat"></div>
+              <h4 class="text-2xl font-bold mb-4 flex items-center justify-center gap-3">
+                <svg class="w-8 h-8 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+                🎯 هدفنا
+              </h4>
+              <p class="text-xl leading-relaxed relative z-10">
+                أن يحقق كل فرد منكم نجاحًا يضيف لنجاح الفريق والشركة، ونحتفل معًا بإنجازات تليق بروح العطاء والعمل الجماعي.
+              </p>
+              <div class="mt-6 flex justify-center space-x-4 space-x-reverse">
+                <svg class="w-6 h-6 text-yellow-300 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                </svg>
+                <svg class="w-6 h-6 text-yellow-300 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                </svg>
+                <svg class="w-6 h-6 text-yellow-300 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-gradient-to-r from-amber-900 via-orange-900 to-yellow-800 text-white py-12" style="background-color: darkorange">
+        <div class="container mx-auto px-6 text-center">
+          <div class="mb-6">
+            <img src="https://cdn.salla.sa/cdn-cgi/image/fit=scale-down,width=400,height=400,onerror=redirect,format=auto/OqeQlR/nXCR6C2cOFuSv1iTLqtEoGAdovWmzeLmjn14NvN5.png" alt="شعار شركة الماجد للعود" class="w-16 h-16 object-contain mx-auto mb-4">
+            <h3 class="text-2xl font-bold">شركة الماجد للعود</h3>
+          </div>
+          <p class="text-yellow-200 text-lg">
+            معًا نحو التميز والنجاح في مسابقة موسم نهاية العام 2025
+          </p>
+          <div class="mt-6 flex justify-center space-x-4 space-x-reverse">
+            <svg class="w-6 h-6 text-yellow-300" fill="yellow" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+            </svg>
+            <svg class="w-6 h-6 text-yellow-300" fill="yellow" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+            </svg>
+            <svg class="w-6 h-6 text-yellow-300" fill="yellow" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+            </svg>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // العد التنازلي
+      function updateCountdown() {
+        const targetDate = new Date('2025-11-30T23:59:59+03:00'); // توقيت السعودية - آخر يوم المسابقة
+        const now = new Date().getTime();
+        const distance = targetDate.getTime() - now;
+        
+        if (distance > 0) {
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          document.getElementById('days').textContent = days;
+          document.getElementById('hours').textContent = hours;
+          document.getElementById('minutes').textContent = minutes;
+          document.getElementById('seconds').textContent = seconds;
+        } else {
+          document.getElementById('days').textContent = '0';
+          document.getElementById('hours').textContent = '0';
+          document.getElementById('minutes').textContent = '0';
+          document.getElementById('seconds').textContent = '0';
         }
-    }
+      }
 
-    function setupPagination() {
-        pagination.innerHTML = "";
-        let pageCount = Math.ceil(rows.length / rowsPerPage);
+      // العبارات التحفيزية
+      const motivationalQuotes = [
+        "✨ كل نقطة اليوم هي إنجاز الغد!",
+        "🏆 اعملوا بجد على الهدف... فالجوائز تنتظر الأبطال!",
+        "🌟 معًا نصنع الفارق، ومعًا نحقق القمة!",
+        "💡 المسؤولية جماعية… والفرح جماعي!",
+        "🚀 طموحكم لا حدود له، وإنجازكم يفوق التوقعات!",
+        "⭐ كل يوم فرصة جديدة لتحقيق المعجزات!",
+        "🎯 الهدف واضح، والطريق مفتوح، والنجاح قريب!",
+        "💪 قوتكم في وحدتكم، ونجاحكم في تعاونكم!",
+        "🌈 اليوم أفضل من أمس، وغداً أفضل من اليوم!",
+        "🔥 الشغف يقودكم، والعزيمة تحقق أحلامكم!"
+      ];
 
-        for (let i = 1; i <= pageCount; i++) {
-            let btn = document.createElement("button");
-            btn.innerText = i;
-            if (i === currentPage) btn.classList.add("active");
-            btn.addEventListener("click", function() {
-                currentPage = i;
-                displayTable(currentPage);
-                setupPagination();
-            });
-            pagination.appendChild(btn);
-        }
-    }
+      let currentQuoteIndex = 0;
 
-    // Search function
-    document.getElementById("searchInput").addEventListener("keyup", function() {
-        let filter = this.value.toLowerCase();
-        let tr = table.getElementsByTagName("tr");
+      function updateCurrentQuote() {
+        document.getElementById('currentQuote').textContent = motivationalQuotes[currentQuoteIndex];
+        currentQuoteIndex = (currentQuoteIndex + 1) % motivationalQuotes.length;
+      }
 
-        for (let i = 0; i < tr.length; i++) {
-            let txtValue = tr[i].textContent || tr[i].innerText;
-            tr[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? "" : "none";
-        }
-    });
+      function createQuotesGrid() {
+        const quotesGrid = document.getElementById('quotesGrid');
+        quotesGrid.innerHTML = '';
+        
+        motivationalQuotes.forEach((quote, index) => {
+          const quoteDiv = document.createElement('div');
+          quoteDiv.className = 'p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group relative overflow-hidden';
+          quoteDiv.style.animationDelay = `${index * 0.1}s`;
+          
+          quoteDiv.innerHTML = `
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-200/0 via-yellow-200/20 to-orange-200/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <p class="text-lg font-semibold text-amber-800 text-center relative z-10 group-hover:text-orange-900 transition-colors">
+              ${quote}
+            </p>
+          `;
+          
+          quotesGrid.appendChild(quoteDiv);
+        });
+      }
 
-    // CSV download
-    function downloadCSV() {
-        let csv = [];
-        let rows = document.querySelectorAll("table tr");
-
-        for (let i = 0; i < rows.length; i++) {
-            let row = [], cols = rows[i].querySelectorAll("td, th");
-            for (let j = 0; j < cols.length; j++) row.push('"' + cols[j].innerText + '"');
-            csv.push(row.join(","));
-        }
-
-        let csvFile = new Blob([csv.join("\n")], { type: "text/csv" });
-        let downloadLink = document.createElement("a");
-        downloadLink.download = "branches.csv";
-        downloadLink.href = window.URL.createObjectURL(csvFile);
-        downloadLink.click();
-    }
-
-    // Initialize
-    displayTable(currentPage);
-    setupPagination();
-</script>
-</body>
-</html>
-
-
-
-
-
+      // تشغيل الوظائف
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+      
+      updateCurrentQuote();
+      setInterval(updateCurrentQuote, 3000);
+      
+      createQuotesGrid();
+    </script>
+  
+</body></html>
